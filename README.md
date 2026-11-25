@@ -1,5 +1,5 @@
 # inventory-and-billing-system
-# Business Management App
+
 
 A web-based business management application designed to simplify day-to-day business operations. It provides a centralized platform for managing inventory, customer records, products, billing, and invoice generation.
 
