@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InvoiceFlow | Dashboard</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<aside class="sidebar">
+    <div class="brand">▣ InvoiceFlow</div>
+    <a class="active" href="/">▦ Dashboard</a>
+    <a href="/invoices.html">▤ Invoices</a>
+    <a href="/customers.html">♙ Customers</a>
+    <div class="side-note">INVOICE MANAGEMENT</div>
+</aside>
+<main class="main">
+    <header>
+        <div>
+            <p class="eyebrow">OVERVIEW</p>
+            <h1>Dashboard</h1>
+            <p class="muted">Welcome back. Here's what's happening with your business.</p>
+        </div>
+        <a class="button" href="/create-invoice.html">＋ Create invoice</a>
+    </header>
+<section class="stats">
+    <article>
+        <span>Total invoices</span>
+        <strong id="totalInvoices">—</strong>
+        <small>All time</small>
+    </article>
+    <article>
+        <span>Paid invoices</span>
+        <strong id="paidInvoices">—</strong>
+        <small class="green">Successfully paid</small>
+    </article>
+    <article>
+        <span>Pending invoices</span>
+        <strong id="pendingInvoices">—</strong>
+        <small>Awaiting payment</small>
+    </article>
+    <article>
+        <span>Overdue invoices</span>
+        <strong id="overdueInvoices">—</strong>
+        <small class="red">Past due date</small>
+    </article>
+</section>
+<section class="panel">
+    <div class="panel-head"><div>
+        <h2>Recent invoices</h2>
+        <p class="muted">Your latest billing activity</p>
+    </div>
+        <a href="/invoices.html">View all →</a>
+    </div>
+    <div class="table-wrap">
+        <table>
+            <thead>
+            <tr>
+                <th>INVOICE</th>
+                <th>CUSTOMER</th>
+                <th>ISSUE DATE</th>
+                <th>DUE DATE</th>
+                <th>AMOUNT</th>
+                <th>STATUS</th>
+            </tr>
+            </thead>
+            <tbody id="recentRows">
+            <tr>
+                <td colspan="6">Loading invoices…</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+</main>
+<script src="/app.js"></script></body></html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Invoices | InvoiceFlow</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<aside class="sidebar">
+    <div class="brand">▣ InvoiceFlow</div>
+    <a href="/">▦ Dashboard</a>
+    <a class="active" href="/invoices.html">▤ Invoices</a>
+    <a href="/customers.html">♙ Customers</a>
+</aside>
+<main class="main">
+    <header>
+        <div>
+            <p class="eyebrow">BILLING</p>
+            <h1>Invoices</h1>
+            <p class="muted">Create and manage customer invoices.</p>
+        </div>
+        <a class="button" href="/create-invoice.html">＋ Create invoice</a>
+    </header>
+    <section class="panel">
+        <div class="panel-head">
+            <input id="search" placeholder="Search invoice or customer…" oninput="renderInvoices()">
+            <select id="filter" onchange="renderInvoices()">
+                <option value="">All statuses</option>
+                <option>PENDING</option>
+                <option>PAID</option>
+                <option>OVERDUE</option>
+            </select>
+        </div>
+        <div class="table-wrap">
+            <table>
+                <thead>
+                <tr>
+                    <th>INVOICE</th>
+                    <th>CUSTOMER</th>
+                    <th>ISSUED</th>
+                    <th>DUE</th>
+                    <th>AMOUNT</th>
+                    <th>STATUS</th>
+                    <th>ACTION</th>
+                </tr>
+                </thead>
+                <tbody id="invoiceRows"></tbody>
+            </table>
+        </div>
+    </section>
+</main>
+<script src="/app.js"></script>
+</body>
+</html>

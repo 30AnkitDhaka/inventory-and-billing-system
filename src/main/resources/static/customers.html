@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Customers | InvoiceFlow</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<aside class="sidebar">
+    <div class="brand">▣ InvoiceFlow</div>
+    <a href="/">▦ Dashboard</a>
+    <a href="/invoices.html">▤ Invoices</a>
+    <a class="active" href="/customers.html">♙ Customers</a>
+</aside>
+<main class="main">
+    <header>
+        <div>
+            <p class="eyebrow">DIRECTORY</p>
+            <h1>Customers</h1>
+            <p class="muted">Manage your customer information.</p>
+        </div>
+    </header>
+    <section class="panel">
+        <h2>Add customer</h2>
+        <form id="customerForm" class="form-grid">
+            <input name="name" placeholder="Customer name" required>
+            <input name="email" type="email" placeholder="Email address" required>
+            <input name="phone" placeholder="Phone">
+            <input name="address" placeholder="Address">
+            <button class="button">Save customer</button>
+        </form>
+    </section>
+    <section class="panel">
+        <div class="panel-head">
+            <h2>All customers</h2>
+        </div>
+        <div class="table-wrap">
+            <table>
+                <thead>
+                <tr>
+                    <th>NAME</th>
+                    <th>EMAIL</th>
+                    <th>PHONE</th>
+                    <th>ADDRESS</th>
+                </tr>
+                </thead>
+                <tbody id="customerRows"></tbody>
+            </table>
+        </div>
+    </section>
+</main>
+<script src="/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Create invoice | InvoiceFlow</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<aside class="sidebar">
+    <div class="brand">▣ InvoiceFlow</div>
+    <a href="/">▦ Dashboard</a>
+    <a class="active" href="/invoices.html">▤ Invoices</a>
+    <a href="/customers.html">♙ Customers</a>
+</aside>
+<main class="main">
+    <header>
+        <div>
+            <p class="eyebrow">BILLING</p>
+            <h1>Create invoice</h1>
+            <p class="muted">Add customer, line items and payment terms.</p>
+        </div>
+        <a href="/invoices.html">← Back to invoices</a>
+    </header>
+    <section class="panel">
+        <form id="invoiceForm">
+            <div class="form-grid">
+                <label>Customer<select name="customerId" id="customerSelect" required>
+                    <option value="">Choose customer</option>
+                </select>
+                </label>
+                <label>Issue date<input type="date" name="issueDate" required></label>
+                <label>Due date<input type="date" name="dueDate" required></label>
+                <label>Tax rate (%)<input type="number" name="taxRate" value="0" min="0" max="100" step=".01"></label>
+            </div>
+            <div class="panel-head">
+                <h2>Invoice items</h2>
+                <button type="button" class="button secondary" onclick="addItem()">＋ Add item</button>
+            </div>
+            <div id="items">
+                <div class="item-row">
+                    <input placeholder="Description" class="desc" required>
+                    <input type="number" placeholder="Qty" class="qty" min="1" value="1" required>
+                    <input type="number" placeholder="Unit price" class="price" min="0" step=".01" required>
+                </div>
+            </div>
+            <div class="actions">
+                <button class="button">Create invoice</button>
+            </div>
+        </form>
+    </section>
+</main>
+<script src="/app.js"></script>
+</body>
+</html>
